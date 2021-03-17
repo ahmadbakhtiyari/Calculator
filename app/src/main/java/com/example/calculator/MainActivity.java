@@ -3,9 +3,13 @@ package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -152,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 amaliat = "";
                 input.setText(amaliat);
+
             }
         });
 
@@ -159,7 +164,26 @@ public class MainActivity extends AppCompatActivity {
         btnmosavi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                amaliat = input.getText().toString();
+                amaliat = amaliat.replace("÷" , "/");
+                amaliat = amaliat.replace("x" , "*");
+                Context rhino = Context.enter();
+                rhino.setOptimizationLevel(-1);
 
+
+                String finalResult = "";
+
+                try {
+                    Scriptable scriptable = rhino.initStandardObjects();
+                    finalResult = rhino.evaluateString(scriptable ,amaliat ,"javaScript",1 , null).toString();
+                    input.setText(finalResult);
+                }
+                catch (Exception e){
+                    finalResult = "0";
+                    input.setText(finalResult);
+
+
+                }
             }
         });
 
