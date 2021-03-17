@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:columnCount="1"
+    android:rowCount="10">
+
+
+    <LinearLayout
+        android:layout_rowWeight="3"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputNumbers"
+            android:padding="16dp"
+            android:textSize="24dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/outputNumbers"
+            android:padding="16dp"
+            android:textSize="32dp"
+            />
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_rowWeight="3"
+        android:layout_columnWeight="1"
+        android:rowCount="4"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_margin="8dp"
+            android:text="1"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn2"
+            android:layout_margin="8dp"
+            android:text="2"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn3"
+            android:layout_margin="8dp"
+            android:text="3"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btnzarb"
+            android:text="*"
+            android:textSize="24dp"
+            android:layout_margin="8dp"
+            />
+
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_margin="8dp"
+            android:text="4"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn5"
+            android:layout_margin="8dp"
+            android:text="5"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn6"
+            android:layout_margin="8dp"
+            android:text="6"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btntaqsim"
+            android:text="/"
+            android:textSize="24dp"
+            android:layout_margin="8dp"
+            />
+
+
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_margin="8dp"
+            android:text="7"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn8"
+            android:layout_margin="8dp"
+            android:text="8"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btn9"
+            android:layout_margin="8dp"
+            android:text="9"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btnjam"
+            android:text="+"
+            android:textSize="24dp"
+            android:layout_margin="8dp"
+            />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_margin="8dp"
+            android:text="0"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btnmosavi"
+            android:layout_margin="8dp"
+            android:text="="
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/btnmenha"
+            android:layout_margin="8dp"
+            android:text="-"
+            android:textSize="24dp"
+            />
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_margin="8dp"
+            android:text="Clear"
+            android:textSize="24dp"
+            />
+
+
+
+    </GridLayout>
+
+
+</GridLayout>
